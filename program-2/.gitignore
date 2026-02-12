@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Temporary files
+downloads/
+trimmed/
+*.mp3
+*.zip
+temp/
+tmp/
+
+# Environment variables
+.env
+.env.local
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
