@@ -4,7 +4,7 @@ Audio mashup tool that downloads YouTube videos, trims audio clips, and merges t
 
 **This project contains:**
 - Program 1 – Command Line Version
-- Program 2 – Web Application (Deployed on Vercel)
+- Program 2 – Web Application
 
 ---
 
@@ -44,7 +44,7 @@ python -m ffmpeg_downloader install
 
 Web-based mashup generator with email delivery.
 
-**Live Demo:** https://mashup-working.vercel.app/
+**Live Demo:** [View Application](https://mashup-working.vercel.app/)
 
 ### Web Interface
 
@@ -69,7 +69,6 @@ mashup/
 │   ├── index.html
 │   ├── api/
 │   ├── requirements.txt
-│   └── vercel.json
 └── README.md
 ```
 

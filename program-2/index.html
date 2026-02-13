@@ -13,216 +13,195 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background-color: #fff8f5; /* Warm cream background */
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            position: relative;
-            overflow-x: hidden;
+            color: #4a4a4a;
         }
 
+        /* Warm gradient background accent */
         body::before {
             content: '';
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
-            top: -250px;
-            right: -250px;
-            border-radius: 50%;
-            animation: float 15s ease-in-out infinite;
-        }
-
-        body::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
-            bottom: -200px;
-            left: -200px;
-            border-radius: 50%;
-            animation: float 20s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(50px, 50px);
-            }
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.8;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.98);
+            background: #ffffff;
             padding: 0;
-            border-radius: 20px;
-            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4), 
-                        0 0 0 1px rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(255, 87, 34, 0.15); /* Orange tinted shadow */
             max-width: 480px;
             width: 100%;
             position: relative;
             z-index: 1;
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            border: 1px solid #fff0e6;
         }
 
         .submission-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 18px 30px;
-            color: white;
+            background: #fff0e6; /* Very pale orange */
+            padding: 22px;
+            color: #bf360c; /* Dark orange/brown text */
             text-align: center;
-            border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 2px solid #ffccbc;
         }
 
         .submission-header h2 {
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 800;
             margin-bottom: 6px;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #d84315;
         }
 
         .submission-header p {
-            font-size: 13px;
-            opacity: 0.95;
-            font-weight: 500;
+            font-size: 12px;
+            color: #8d6e63;
+            font-weight: 600;
         }
 
         .form-content {
-            padding: 30px;
+            padding: 45px;
         }
 
         h1 {
-            color: #1a1a2e;
-            margin-bottom: 8px;
+            color: #d84315; /* Burnt Orange */
+            margin-bottom: 12px;
             text-align: center;
             font-size: 28px;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .subtitle {
             text-align: center;
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 14px;
-            font-weight: 500;
+            color: #8d6e63; /* Warm Brown */
+            margin-bottom: 35px;
+            font-size: 15px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 24px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
-            color: #333;
+            margin-bottom: 10px;
+            color: #5d4037;
             font-weight: 700;
             font-size: 13px;
-            letter-spacing: 0.3px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         input {
             width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e8eaf6;
-            border-radius: 10px;
-            font-size: 14px;
+            padding: 14px 16px;
+            border: 2px solid #ffe0b2; /* Light orange border */
+            border-radius: 8px;
+            font-size: 15px;
             transition: all 0.3s ease;
-            background: #fafafa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fffbf7;
+            color: #3e2723;
         }
 
         input:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
-            background: white;
+            border-color: #ff7043; /* Bright orange focus */
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.15);
         }
 
-        input:invalid {
-            border-color: #e8eaf6;
+        input::placeholder {
+            color: #d7ccc8;
         }
 
         .error {
-            color: #e74c3c;
+            color: #d32f2f; /* Red error */
             font-size: 12px;
             margin-top: 6px;
             display: none;
             font-weight: 600;
         }
 
+        .info-text {
+            display: none; /* Hiding warnings */
+        }
+
         button {
             width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 16px;
+            background: linear-gradient(45deg, #ff7043 0%, #ff5722 100%); /* Deep Orange Gradient */
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 15px;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
         }
 
         button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(255, 87, 34, 0.4);
         }
 
         button:active {
-            transform: translateY(-1px);
+            transform: translateY(0);
         }
 
         button:disabled {
-            background: linear-gradient(135deg, #bdbdbd 0%, #9e9e9e 100%);
+            background: #e0e0e0;
+            color: #9e9e9e;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
         }
 
         .message {
-            margin-top: 18px;
-            padding: 14px 18px;
-            border-radius: 10px;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
             display: none;
             text-align: center;
+            font-size: 14px;
             font-weight: 600;
-            font-size: 13px;
         }
 
         .message.success {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            color: #155724;
-            border: 2px solid #b1dfbb;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
         }
 
         .message.error {
-            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-            color: #721c24;
-            border: 2px solid #f1b0b7;
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
         }
 
         .loader {
             display: none;
-            margin: 18px auto;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
+            margin: 25px auto;
+            border: 3px solid #fbe9e7;
+            border-top: 3px solid #ff5722;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             animation: spin 0.8s linear infinite;
         }
 
@@ -231,137 +210,14 @@
             100% { transform: rotate(360deg); }
         }
 
-        .info-text {
-            font-size: 12px;
-            color: #888;
-            margin-top: 6px;
-            font-weight: 500;
-        }
-
-        input::placeholder {
-            color: #bbb;
-        }
-
         @media (max-width: 600px) {
             .container {
-                border-radius: 16px;
                 max-width: 100%;
+                box-shadow: none;
+                border-radius: 12px;
             }
-
-            .submission-header {
-                padding: 16px 20px;
-            }
-
-            .submission-header h2 {
-                font-size: 14px;
-            }
-
-            .submission-header p {
-                font-size: 12px;
-            }
-
             .form-content {
-                padding: 24px 20px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            .subtitle {
-                font-size: 13px;
-                margin-bottom: 20px;
-            }
-
-            .form-group {
-                margin-bottom: 16px;
-            }
-
-            label {
-                font-size: 12px;
-                margin-bottom: 6px;
-            }
-
-            input {
-                padding: 10px 14px;
-                font-size: 13px;
-            }
-
-            button {
-                padding: 12px;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-height: 900px) {
-            body {
-                padding: 15px;
-            }
-
-            .container {
-                max-width: 460px;
-            }
-
-            .submission-header {
-                padding: 15px 25px;
-            }
-
-            .form-content {
-                padding: 25px;
-            }
-
-            .form-group {
-                margin-bottom: 16px;
-            }
-
-            h1 {
-                font-size: 26px;
-                margin-bottom: 6px;
-            }
-
-            .subtitle {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-height: 800px) {
-            .submission-header {
-                padding: 12px 20px;
-            }
-
-            .submission-header h2 {
-                font-size: 15px;
-                margin-bottom: 4px;
-            }
-
-            .submission-header p {
-                font-size: 12px;
-            }
-
-            .form-content {
-                padding: 20px;
-            }
-
-            .form-group {
-                margin-bottom: 14px;
-            }
-
-            h1 {
-                font-size: 24px;
-                margin-bottom: 5px;
-            }
-
-            .subtitle {
-                font-size: 13px;
-                margin-bottom: 18px;
-            }
-
-            input {
-                padding: 10px 14px;
-            }
-
-            button {
-                padding: 12px;
+                padding: 30px 25px;
             }
         }
     </style>
@@ -375,7 +231,7 @@
 
         <div class="form-content">
             <h1>Music Mashup Generator</h1>
-            <p class="subtitle">Create amazing mashups and get them via email</p>
+            <p class="subtitle">Create mashups and get them via email</p>
 
             <form id="mashupForm">
                 <div class="form-group">
@@ -385,7 +241,7 @@
                         id="singer" 
                         name="singer" 
                         required 
-                        placeholder="e.g., Arijit Singh"
+                        placeholder="Enter singer name"
                         minlength="2"
                     >
                     <div class="error" id="singerError">Please enter a valid singer name</div>
@@ -398,11 +254,9 @@
                         id="numVideos" 
                         name="numVideos" 
                         required 
-                        min="11" 
-                        max="15"
-                        placeholder="Recommended: 11-15"
+                        placeholder="Enter number of videos"
                     >
-                    <div class="info-text">⚠️ Start with 11-12 videos (free tier may timeout with more)</div>
+                    <div class="info-text"></div>
                     <div class="error" id="numVideosError">Number must be greater than 10</div>
                 </div>
 
@@ -413,11 +267,9 @@
                         id="duration" 
                         name="duration" 
                         required 
-                        min="21" 
-                        max="30"
-                        placeholder="Recommended: 21-25"
+                        placeholder="Enter duration in seconds"
                     >
-                    <div class="info-text">⚠️ Keep duration short (21-25 sec) to avoid timeout</div>
+                    <div class="info-text"></div>
                     <div class="error" id="durationError">Duration must be greater than 20 seconds</div>
                 </div>
 
@@ -428,9 +280,9 @@
                         id="email" 
                         name="email" 
                         required 
-                        placeholder="your.email@example.com"
+                        placeholder="Enter your email"
                     >
-                    <div class="info-text">Mashup will be sent to this email</div>
+                    <div class="info-text"></div>
                     <div class="error" id="emailError">Please enter a valid email address</div>
                 </div>
 
@@ -543,13 +395,13 @@
                 const result = await response.json();
 
                 if (result.success) {
-                    showMessage('✅ Success! Your mashup is being created and will be sent to your email shortly.', 'success');
+                    showMessage('Success! Your mashup is being created and will be sent to your email shortly.', 'success');
                     form.reset();
                 } else {
-                    showMessage('❌ Error: ' + (result.error || 'Something went wrong. Please try again.'), 'error');
+                    showMessage('Error: ' + (result.error || 'Something went wrong. Please try again.'), 'error');
                 }
             } catch (error) {
-                showMessage('❌ Network error. Please check your connection and try again.', 'error');
+                showMessage('Network error. Please check your connection and try again.', 'error');
                 console.error('Error:', error);
             } finally {
                 submitBtn.disabled = false;
