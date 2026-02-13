@@ -48,7 +48,7 @@ Web-based mashup generator with email delivery.
 
 ### Web Interface
 
-<img src="mashup-website.png" alt="Mashup Web Application" height="500">
+<img src="mashup-web.png" alt="Mashup Web Application" height="500">
 
 ### User Inputs
 - Singer Name
